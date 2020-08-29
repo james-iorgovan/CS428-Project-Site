@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>3 screen app</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+  <style>
+    .content {
+      display: none;
+      margin: 1em;
+    }
+  </style>
+  <style>
+    /* Set the size of the div element that contains the map */
+    #map {
+      height: 600px;
+      /* The height is 400 pixels */
+      width: 100%;
+      /* The width is the width of the web page */
+    }
+  </style>
+
+</head>
+
+<body style="background-color:powderblue;">
+
+
+  <!-- navigation bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Movies in the Parks</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#search">Search<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#list">List<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#googlemaps">Maps</a>	
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Filter preferences -->
+  <div class="content" id="search">
+    <h4>Find Your Movie</h4>
+    <br>
+    <p>This is the Search Page</p>
+
+
+
+    <form>
+      <b>Enter movie name: <input type="text" name="MovieName" id="MovieName"><br>
+Enter park name: <input type="text" name="ParkName"></b>
+      <br>
+
+      <label>
+        <input type="checkbox" name="sunday">Sunday</label>
+      <br>
+      <label>
+        <input type="checkbox" name="monday">Monday</label>
+      <br>
+      <label>
+        <input type="checkbox" name="tuesday">Tuesday</label>
+      <br>
+      <label>
+        <input type="checkbox" name="wednesday">Wednesday</label>
+      <br>
+      <label>
+        <input type="checkbox" name="thursday">Thursday</label>
+      <br>
+      <label>
+        <input type="checkbox" name="friday">Friday</label>
+      <br>
+      <label>
+        <input type="checkbox" name="saturday">Saturday</label>
+      <br>
+      <label>
+        <input type="checkbox" name="upcomingmovies" checked>Upcoming Movies</label>
+      <br>
+      <button id="btnSearch">Search</button>
+    </form>
+  </div>
+
+
+  <div class="content" id="googlemaps">
+    <h4>Movies in Parks Locations</h4>
+    <!--The div element for the map -->
+    <div id="map"></div>
+    <script>
+      // Initialize and add the map
+
+      function initMap() {
+        // The location of Chicago
+        var uluru = {
+          lat: 41.8781,
+          lng: -87.6298
+        };
+        // The map, centered at Chicago
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 11,
+          center: uluru
+        });
+        // The marker, positioned at Uluru
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+
+
+
+    <!--Load the API from the specified URL
+    * The async attribute allows the browser to render the page while the API loads
+    * The key parameter will contain your own API key (which is not needed for this tutorial)
+    * The callback parameter executes the initMap() function
+    -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTDBVJ2Dup-JiuF8U9ZCknI-PjKmgr2-w&callback=initMap">
+    </script>
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <script>
+		 var endpoint = "https://data.cityofchicago.org/resource/7piw-z6r6.json";
+    $(document).ready(function() {
+      $("#btnSearch").on("click", function(e) {
+				e.preventDefault();
+				let title = $("#MovieName").val() // gives reference to object
+				let url = endpoint + "?title=" + title;
+        $.get(url, function(response){
+					$.each(response ,function(i, v){
+						var d = $("<div>");
+						d.text("Park: " + v.park + ", " + "Movie: " + v.title + ", " + "Date: " + v.date +  ", " + "Rating: " + v.rating);
+						$("#list").append(d);
+					});
+				});
+      });
+    });
+  </script>
+
+  <div class="content" id="list">
+    <h4>List of movies:</h4>
+    <p>List of movies:</p>
+  </div>
+
+  <div class="content" id="about">
+    <h4>Meet the Creator of Movies in the Parks</h4>
+    <p>Hello! Welcome to my first app. This app will allow you (or at least should) to look up movies from a database.
+      <br>It let's you filter out days of the week, upcoming movies, enter in a specific movie or park name,
+      <br>and view it Google Maps. Below is my repo for the project incase you are interested in looking at it.
+      <br>
+      <br>Github repo: https://github.com/james-iorgovan/IT202-project2</p>
+  </div>
+
+  <script>
+    hideScreens();
+
+    function hideScreens() {
+      $(".content").hide();
+    }
+    $(document).ready(function() {
+      $(".nav-link").on("click", function() {
+        hideScreens();
+        var target = $(this).attr("href");
+        $(target).show();
+      });
+    });
+  </script>
+</body>
+
+</html>

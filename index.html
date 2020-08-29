@@ -37,37 +37,39 @@ body, html {
   height: 100%;
 }
 
-#Home {background-color: red;}
-#News {background-color: green;}
-#Contact {background-color: blue;}
-#About {background-color: orange;}
+#Home {background-color: powderblue;}
+#Tab1 {background-color: powderblue;}
+#Tab2 {background-color: powderblue;}
+#Tab3 {background-color: powderblue;}
 </style>
 </head>
 <body>
 
-<button class="tablink" onclick="openPage('Home', this, 'red')">Home</button>
-<button class="tablink" onclick="openPage('News', this, 'green')" id="defaultOpen">News</button>
-<button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
-<button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
+<button class="tablink" onclick="openPage('Home', this, 'powderblue')">Home</button>
+<button class="tablink" onclick="openPage('News', this, 'powderblue')" id="defaultOpen">Tab1</button>
+<button class="tablink" onclick="openPage('Contact', this, 'powderblue')">Tab2</button>
+<button class="tablink" onclick="openPage('About', this, 'powderblue')">Tab3</button>
 
 <div id="Home" class="tabcontent">
   <h3>Home</h3>
-  <p>Home is where the heart is..</p>
+  <p>James's CS428 Website</p>
 </div>
 
-<div id="News" class="tabcontent">
-  <h3>News</h3>
-  <p>Some news this fine day!</p> 
+<div id="Tab1" class="tabcontent">
+  <h3>This is Tab1 title</h3>
+  <p>This is tab1 para!</p> 
 </div>
 
-<div id="Contact" class="tabcontent">
-  <h3>Contact</h3>
-  <p>Get in touch, or swing by for a cup of coffee.</p>
+
+<div id="Tab2" class="tabcontent">
+  <h3>This is Tab2 title</h3>
+  <p>This is tab2 para!</p> 
 </div>
 
-<div id="About" class="tabcontent">
-  <h3>About</h3>
-  <p>Who we are and what we do.</p>
+
+<div id="Tab3" class="tabcontent">
+  <h3>This is Tab3 title</h3>
+  <p>This is tab3 para!</p> 
 </div>
 
 <script>

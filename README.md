@@ -1,5 +1,5 @@
-# Running this project:
-- Download the project
+# Running This Project
+- Download the project files
 - Open with Unity 2019.4.1 (be sure to also have Vuforia Engine installed in your Unity)
 - Run the webcam
 - Hold up at the camera:

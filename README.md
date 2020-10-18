@@ -1,4 +1,4 @@
-# Running The Project
+# Running the Projects
 # Project 1:
 - Download the project files
 - Open with Unity 2019.4.1 (be sure to also have Vuforia Engine installed in your Unity)
@@ -20,7 +20,8 @@
     - The typing sound should stop, and the humanoid should start talking.
     - Let go of the virtual button and the talking should stop and typing resumes.
 
-Project 2 (The LifeSize): Because the apk file is too large, I will take you through how to open it up.
+# Project 2 (The LifeSize): 
+***Disclaimer: Because the apk file is too large, it will not be within this GitHub repo. I will take you through how to open it up.
 
 - Go to File > Build Settings > Platform > Android/iOS
 - Select to build only the SecondScene

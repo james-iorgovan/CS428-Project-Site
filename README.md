@@ -1,5 +1,5 @@
 # Running the Projects
-# Project 1:
+# Project 1
 - Download the project files
 - Open with Unity 2019.4.1 (be sure to also have Vuforia Engine installed in your Unity)
 - Run the webcam
@@ -9,7 +9,7 @@
   - The Fissure - to see a thermometer that displays the temperature as well as the humidity outside (Fissure note: you will need to sign-up for free at openweathermap in order to generate your own API key. This will allow you to get relevant data to your surrounding via a JSON file that one of the scripts I created in the Unity project reads).
   - The Oxygen - to see a windsock that [is supposed to] display the wind in mphs as well as the direction of the wind 
   
- # Project 2 (The Humanoid Animation):
+ # Project 2 (The Humanoid Animation)
 - Download the project files
 - Open with Unity 2019.4.1 (be sure to also have Vuforia Engine installed in your Unity)
 - Click "Add" and find the project on your PC. Open it.
@@ -20,7 +20,7 @@
     - The typing sound should stop, and the humanoid should start talking.
     - Let go of the virtual button and the talking should stop and typing resumes.
 
-# Project 2 (The Life-size Humanoid): 
+# Project 2 (The Life-size Humanoid)
 ***Disclaimer: Because the apk file is too large, it will not be within this GitHub repo. I will take you through how to open it up.
 
 - Go to File > Build Settings > Platform > Android/iOS

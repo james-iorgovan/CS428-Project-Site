@@ -20,7 +20,7 @@
     - The typing sound should stop, and the humanoid should start talking.
     - Let go of the virtual button and the talking should stop and typing resumes.
 
-# Project 2 (The LifeSize): 
+# Project 2 (The Life-size Humanoid): 
 ***Disclaimer: Because the apk file is too large, it will not be within this GitHub repo. I will take you through how to open it up.
 
 - Go to File > Build Settings > Platform > Android/iOS

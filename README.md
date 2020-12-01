@@ -35,3 +35,12 @@ can do by applying the module under your Installations).
 - Point your phone's camera near the ground (at first you might need to get close to the ground until you see a focus box appear).
 - The life-size humanoid will then appear. You can see it typing and it will not move even if you walk around it.
 
+# Project 3
+- Download the project files
+- Open with Unity 2019.4.1 (be sure to also have Vuforia Engine installed in your Unity)
+- Click on each object (such as the ones on the table or around the room) in order to see each collider boundary. This will imitate 3D physics when an object bumps into it.
+- Interactive objects:
+  - Go near the light switch on the blue wall, the vending machine, or green lamp and press "o" in order to activate lighting effects.
+  - Each humanoid is tied in with the collision script and will require the "o" button to be pressed as well.
+
+

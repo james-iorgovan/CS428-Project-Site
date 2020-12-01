@@ -70,8 +70,95 @@ body {
 <button class="tablink" onclick="openPage('Home', this, '#555')"id="defaultOpen">Home</button>
 <button class="tablink" onclick="openPage('Tab1', this, '#555')">Project 1</button>
 <button class="tablink" onclick="openPage('Tab2', this, '#555')">Project 2</button>
+<button class="tablink" onclick="openPage('Tab4', this, '#555')">Project 3</button>
 <button class="tablink" onclick="openPage('Tab3', this, '#555')">Student's Choice</button>
 
+	<div id="Tab4" class="tabcontent">
+	<h2>Project 3 - School's Out</h2>
+  <p>Welcome! Today, I will be taking you through some very awesome virtual realities! We will be looking at how we could
+		learn to interact with things, just as you see in games!</p> 
+  <br>
+		  <br>
+    <br>
+  <h2>Useful Links</h2>
+  <p><a href="https://github.com/james-iorgovan/CS428-Project3">Get Unity Project 3 Files Here</a></p>
+  <p><a href="https://www.youtube.com/watch?v=UWM9sQvVSiI">Watch the Video!</a></p>
+  <a href="Project 3 Documentation.pdf">My Thoughts on Virtual Reality</a>
+   <br>
+  <br>
+	<br>
+	<h3>What you can expect</h3>
+		<p>In photos 1 and 2, we can see the colliders for both objects that will animate. The lamp will act as an actual lamp
+		in real life where you can turn it on and off again. In the vending machine photo, this is supposed to work as 
+		vending machine do when they go inactive for a while, the light is turned off to perserve energy. When someone
+		activates it, or in this case hits "o" on their keyboard, it will turn on the vending machine and cause it to light up.</p>
+		<div class="row">
+  <div class="column">
+		<h5>Photo 1: Turning on an off a lamp</h5>
+    <img src="pic10.png" alt="Lighting lamp effect" style="width:100%" height=380px>
+  </div>
+  <div class="column">
+		<h5>Photo 2: Vending machine activation</h5>
+    <img src="pic11.png" alt="Lighting vending effect" style="width:100%" height=380px>
+  </div>
+</div>
+		<p>In photo 4, we can look closer at the script as to how this all works and comes together. 
+		If we look closely at line 10, we can see that we instantiate a call for Collider for a player (or in this case
+		the user who is walking around [you]). When a player is within the bounds of the colliders for any of these obejcts
+		and hits the appropiate key, it will "animate" as programmed. In this case I set up a lighting affect for each of
+		these obejcts in order to imitate real life.</p>
+		<div class="row">
+  <div class="column">
+		<h5>Photo 3: Adding audio to character colliders</h5>
+    <img src="pi05.png" alt="Audio script" style="width:100%" height=380px>
+  </div>
+  <div class="column">
+		<h5>Photo 4: Collider scripting</h5>
+    <img src="pic06.png" alt="Collider script" style="width:100%" height=380px>
+  </div>
+</div>
+		<p>In photo 6, we can see how the humanoids in the virutal reality setting are supposed to interact once you get near them.
+		The same concept applies when I added colliders in order to detect if someone was near close enough in order to activate
+		an action, or in this cas a sound. In picture 5, we see that the humanoid as well as the objects on the tables all have
+		physcial 3D colliders. This will allow the imitation of physics occuring in the virutal reality simulation.
+		We make is so that when you go into the collider boundary, it will trigger the animation as well as speach from each humanoid.</p>
+			<br>
+		  <div class="column">
+		<h5>Photo 5: Adding colliders to objects</h5>
+    <img src="pic04.png" alt="Humanoid collider" style="width:100%" height=380px>
+  </div>
+  <div class="column">
+		<h5>Photo 6: Transtion between mixamo animations</h5>
+    <img src="pic03.png" alt="Action change" style="width:100%" height=380px>
+  </div>
+	<br>
+		<br>
+		<p>As seen in picture 7, the vending machine will have a smaller collider boundary in order to imiatate a more realisitc
+		experience of using one. It is not possible to poke the buttons with your finger from 10 feet away, so I made this collider
+		a lot smaller given that the vending machine is so large. On the other hand, I made the collider for the lightswitch a lot
+		larger because of the size of the switch. It is very small and could prove difficult when trying to turn it on and off.</p>
+		<div class="column">
+		<h5>Photo 7: Small collider to vending</h5>
+    <img src="pic01.png" alt="Vending collider boundary" style="width:100%" height=380px>
+  </div>
+  <div class="column">
+		<h5>Photo 8: Lightswitch</h5>
+    <img src="pic09.png" alt="Lightswitch" style="width:100%" height=380px>
+  </div>
+	<br>
+		<p>Test</p>
+		<div class="column">
+		<h5>Photo 7: Small collider to vending</h5>
+    <img src="pic01.png" alt="Vending collider boundary" style="width:100%" height=380px>
+  </div>
+  <div class="column">
+		<h5>Photo 8: Lamp collider</h5>
+    <img src="pic02.png" alt="Lightswitch" style="width:100%" height=380px>
+  </div>
+	<br>
+
+	</div>
+	
 <div id="Home" class="tabcontent">
   <h2>Welcome to CS 428</h2>
   <p>This will be the website used to post every project created in this course. I am expecting an 

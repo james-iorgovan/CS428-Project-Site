@@ -1,0 +1,17 @@
+{
+ "name": "CS428-GitSite",
+ "children": [
+  {
+   "title": "Page 1",
+   "id": "7386deb1-6eec-0f88-fa96-2cc99b794200",
+   "pageId": "7386deb1-6eec-0f88-fa96-2cc99b794200",
+   "type": "page"
+  },
+  {
+   "title": "Page 2",
+   "id": "802ec0e6-f66d-8e58-5f6a-dc7d24cefd95",
+   "pageId": "802ec0e6-f66d-8e58-5f6a-dc7d24cefd95",
+   "type": "page"
+  }
+ ]
+}
